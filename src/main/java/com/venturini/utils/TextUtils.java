@@ -31,7 +31,7 @@ public class TextUtils {
      * @return the centered text padded with spaces, or the original text if no formatting is applied
      */
     public static String centerString(String text, int width) {
-        if (text == null || width <= text.length()) {
+        if (text == null || width <= 0 || width <= text.length()) {
             return text;
         }
 
@@ -39,7 +39,6 @@ public class TextUtils {
         int padStart = padSize / 2;
         int padEnd = padSize - padStart;
 
-        String padded = String.format("%" + (padStart + text.length()) + "s", text);
-        return String.format("%-" + width + "s", padded);
+        return " ".repeat(padStart) + text + " ".repeat(padEnd);
     }
 }
