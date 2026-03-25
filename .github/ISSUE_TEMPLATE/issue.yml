@@ -1,0 +1,63 @@
+name: Issue
+description: Standardized issue template
+title: "[type]: "
+labels: []
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Brief description of the change or problem
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this needed?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Feature
+        - Refactor
+        - Bug
+        - Chore
+        - Docs
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      description: List of tasks
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical
+    attributes:
+      label: Technical Details
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks / Impact
+
+  - type: textarea
+    id: related
+    attributes:
+      label: Related
